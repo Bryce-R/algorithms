@@ -1,42 +1,4 @@
-"""
-def answer(l):
-    # your code here
-    def divisible(n,m,memo):
-    	if n not in memo:
-    		memo[n] = []
-    	if m in memo[n]:
-    		return True
-    	elif n%m == 0:
-    		memo[n].append(m)
-    		memo[n].append(n/m)
-    		return True
-    	return False
 
-    n = len(l)
-    ct = 0
-    memo = {}
-    for i in xrange(n):
-    	for j in xrange(i+1,n):
-    		if divisible(l[j],l[i],memo):
-    			for k in xrange(j+1,n):
-    				if divisible(l[k],l[j],memo):
-    					ct+=1
-
-    return ct
-
-def answer1(l):
-    # your code here
-    n = len(l)
-    ct = 0
-    for i in xrange(n):
-    	for j in xrange(i+1,n):
-    		if l[j]%l[i]==0:
-    			for k in xrange(j+1,n):
-    				if l[k]%l[j]==0:
-    					ct+=1
-
-    return ct
-""" 
 def answer2(l):
     n = len(l)
     ct = 0
