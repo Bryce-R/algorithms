@@ -42,7 +42,7 @@ bool process(long long t, int r, int b, vector<vector<long long>> &cashier) {
     }
   }
   sort(bits.begin(), bits.end());
-  int total = 0;
+  long long total = 0;
   for (auto it = bits.rbegin(); it != bits.rend() && r > 0; it++) {
     total += (*it);
     r--;
